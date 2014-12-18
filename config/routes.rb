@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  get "/",                   to: "home#index", as: :root
+  # get "/:id/home",           to: "home#show"
+  # get "/:weight/:dimensions/:cylinder/:country/:state/:city/:zip/:login/:password/:key",           to: "home#show"
+  get "/home/:search_term",  to: "home#search"
+  get "/ups",                to: "home#ups"
+  get "/usps",                to: "home#usps"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
